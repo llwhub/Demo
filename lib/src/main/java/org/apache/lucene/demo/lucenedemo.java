@@ -90,5 +90,6 @@ public class lucenedemo extends TestCase{
 		assertEquals(2,writer.numDocs());
 		writer.deleteDocuments(new Term("id","1"));
 		writer.commit();
+		assertTrue(writer.hasDeletions());
 	}
 }
